@@ -1,0 +1,36 @@
+Browser
+---
+  HTML Renderer  (HTML)
+  CSS Parser  (CSS)
+  JS Engine  (JS)
+
+HTML 
+---
+  * Structural Layer 
+  * Standard 
+
+  Layout
+  ---
+    1. Fixed Layout 
+    2. Fluid Layout
+
+  HTML Elements
+  ---
+    1. Block Level Elements 
+        Examples: header, main, footer, h1-h6, div, section
+    2. Inline Elements
+        Examples: a, img, button, span, input, textarea
+
+
+CSS 
+---
+  * Presentation Layer 
+  * Standard
+
+
+
+
+
+JS 
+--
+  * Interaction Layer 
