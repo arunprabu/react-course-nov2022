@@ -4,6 +4,21 @@ Browser
   CSS Parser  (CSS)
   JS Engine  (JS)
 
+  Browser Families
+  --
+    Webkit 
+      Safari 
+      
+    Mozilla 
+      Firefox
+
+    Chromium (Webkit + Mozilla + extra )
+      Chrome 
+      Opera
+      Edge
+      Brave
+    
+
 HTML 
 ---
   * Structural Layer 
