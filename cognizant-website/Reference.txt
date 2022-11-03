@@ -49,3 +49,58 @@ CSS
 JS 
 --
   * Interaction Layer 
+
+---
+
+Naming Conventions 
+---
+
+  Casing Types
+  ---
+    1. PascalCase   
+        * recommended for object oriented classes in JavaScript and TypeScript  
+        * also recommended for Interface in TypeScript
+
+        examples: 
+          class CarDetails{
+
+          }
+
+          interface User{
+
+          }
+      
+    2. camelCase 
+        * recommended for variables, const, functions, methods in JS and TS 
+        * recommended for id's of html elements 
+
+        Examples: 
+          var myCar = 'BMW';
+          function getCarInfo(){
+            
+          }
+
+    3. kebab-case 
+        * recommended for css classes and urls 
+        * okay for id's of html elements if architect accepts 
+        
+        Examples:
+          btn-primary 
+          slideshow-container
+
+    4. snake_case
+        * never ever use this.
+        * okay for const in JS and TS if architect accepts 
+        Example: 
+          const MAX_STUDENTS_PER_CLASS = 30;
+
+
+-----
+
+
+    
+          
+
+
+
+        
