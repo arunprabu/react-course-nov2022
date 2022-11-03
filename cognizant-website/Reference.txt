@@ -82,6 +82,7 @@ Naming Conventions
 
     3. kebab-case 
         * recommended for css classes and urls 
+        * recommended for file names, folder names, assets in front end projects
         * okay for id's of html elements if architect accepts 
         
         Examples:
@@ -97,10 +98,59 @@ Naming Conventions
 
 -----
 
+CSS 
+---
+  * Cascading Style Sheet 
+  * Presentation Layer 
 
+  CSS Types 
+  1. Inline CSS 
+      * Coded directly in the html element 
+      * coded with style attribute 
+
+      Disadv
+      ---
+        1. Styles can't be used in other elements
+        2. Styles can't be used in other pages
+        3. Logical separation of layers can't be followed
+
+  2. Internal CSS 
+      * coded inside the html file itself 
+      * coded in between style tag -- inside head tag 
+          <style> 
+            /* Internal Styles */
+            selector {
+              /* style definitions */
+              property: value;
+            }
+          <style>
+
+      Disadv
+      ---
+        1. Styles can't be used in other pages
+        2. Logical separation of layers can't be followed
+
+
+  3. External CSS 
+      * will be coded in separate css file with .css being file extension 
+      * the file should be linked from html file
+
+      --
+
+
+  CSS Syntax
+  ---
+    selector {
+      /* style definitions */
+      property: value;
+    }
+
+  Selectors
+  ----
+    1. Element / Tag Selector 
+    2. ID Selector 
+    3. Class Selector 
+    4. Attribute Selector [TODO]
+    5. Pseudo Selector [TODO]
+    6. Universal Selector
     
-          
-
-
-
-        
