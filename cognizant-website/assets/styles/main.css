@@ -1,7 +1,69 @@
 /* External Styles */
 
-/* Element Selector */
 body {
-  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; 
 }
 
+/* util classes */
+.red {
+  border: solid 1px red;
+}
+
+/* class selector -- recommended */
+.primary-header{
+  width: 1180px;
+  margin: 0 auto;
+  padding: 30px 0; 
+}
+
+.logo-link{
+  width: 260px;
+  display: inline-block;
+}
+
+.primary-nav{
+  display: inline-block;
+  width: calc(100% - 270px);
+  text-align: right;
+  vertical-align: top;
+}
+
+.primary-nav ul li {
+  display: inline;
+  list-style: none;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+/* TODO: work on mouseover effect */
+
+.primary-nav ul li a {
+  color: darkblue;
+  /* TODO: remove underline from anchor tag */
+}
+
+/* Footer Styles */
+
+/* Style for Home page */
+.jumbotron {
+  background-color: darkblue;
+  padding:7% 10%;
+  height: 320px;
+}
+
+.jumbotron h1{
+  color: #fff;
+  font-size: 46px;
+  margin-bottom: 16px;
+}
+
+.jumbotron p{
+  color: #fff;
+  font-size: 16px;
+}
+
+.jumbotron .c2a-btn{
+  margin: 8px 0;
+  display: inline-block;
+  text-decoration: none;
+}

@@ -14,54 +14,53 @@
     <title>Cognizant | Welcome to Home Page of Cognizant</title>
     
     <!-- Loading External style sheet -->
+    <link rel="stylesheet" href="./assets/styles/normalize.min.css">
     <link rel="stylesheet" href="./assets/styles/main.css">
     <style>
       /* Internal Styles */
-      /* ID Selector */
-      #jumbotron {
-        background-color: darkblue;
-        height: 500px;
-      }
-
       p {
         color: red;
       }
     </style>
   </head>
   
-  <body>
+  <body> 
     <!-- the following will be visible in browser's view port -->
     <header>
-      <a href="./index.html">
-        <img
-          src="./assets/images/COG-Logo-2022.svg"
-          alt="Cognizant Logo"
-          width="200"
-        />
-      </a>
+      <div class="primary-header">
+        <a href="./index.html" class="logo-link">
+          <img
+            src="./assets/images/COG-Logo-2022.svg"
+            alt="Cognizant Logo"
+            width="200"
+          />
+        </a>
 
-      <ul>
-        <li>
-          <a href="./index.html">Home</a>
-        </li>
-        <li>
-          <a href="./services.html">Services</a>
-        </li>
-        <li>
-          <a href="./about.html">About</a>
-        </li>
-        <li>
-          <a href="./contact.html">Contact</a>
-        </li>
-      </ul>
-      <hr>
+        <nav class="primary-nav">
+          <ul>
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./services.html">Services</a>
+            </li>
+            <li>
+              <a href="./about.html">About</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <div id="jumbotron">
+      <div class="jumbotron">
         <h1>Is your business ready for anything?</h1>
         <p>Cognizant commissioned a landmark study by Economist Impact to define what it takes to be future-fit, and how close businesses are to getting there.</p>
-        <a href="./contact.html" 
+        <!-- Inline Style -->
+        <a href="./contact.html" class="c2a-btn"
           style="background-color: aqua; padding: 10px 22px; border-radius: 30px;">Get in Touch</a>
       </div>
 
@@ -81,41 +80,44 @@
     </main>
 
     <footer>
-      <hr>
-      <ul>
-        <li>
-          <a href="#">
-            <img 
-              src="./assets/icons/linkedin.png" 
-              alt="Cognizant's Linkedin Page"
-              width="32"
-          /></a>
-        </li>
-        <li>
-         <a href="#">
-            <img 
-              src="./assets/icons/twitter.png" 
-              alt="Cognizant's Twitter Profile"
-              width="32"
-          /></a>
-        </li>
-        <li>
-          <a href="#">
-            <img 
-              src="./assets/icons/facebook.png" 
-              alt="Cognizant's facebook Profile"
-              width="32"
-          /></a>
-        </li>
-      </ul>
+      <div class="footer-wrapper">
+        <ul class="social-links">
+          <li>
+            <a href="#">
+              <img 
+                src="./assets/icons/linkedin.png" 
+                alt="Cognizant's Linkedin Page"
+                width="32"
+            /></a>
+          </li>
+          <li>
+            <a href="#">
+              <img 
+                src="./assets/icons/twitter.png" 
+                alt="Cognizant's Twitter Profile"
+                width="32"
+            /></a>
+          </li>
+          <li>
+            <a href="#">
+              <img 
+                src="./assets/icons/facebook.png" 
+                alt="Cognizant's facebook Profile"
+                width="32"
+            /></a>
+          </li>
+        </ul>
 
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./services.html">Services</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-      <p>&copy;2022 Cognizant, all rights reserved</p>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <p>&copy;2022 Cognizant, all rights reserved</p>
+      </div>
     </footer>
   </body>
 </html>

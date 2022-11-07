@@ -92,7 +92,7 @@ Naming Conventions
     4. snake_case
         * never ever use this.
         * okay for const in JS and TS if architect accepts 
-        Example: 
+        Example:  
           const MAX_STUDENTS_PER_CLASS = 30;
 
 
@@ -148,7 +148,7 @@ CSS
   Selectors
   ----
     1. Element / Tag Selector 
-    2. ID Selector 
+    2. ID Selector (NOT RECOMMENED - use class selector)
     3. Class Selector 
     4. Attribute Selector [TODO]
     5. Pseudo Selector [TODO]
