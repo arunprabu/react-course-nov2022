@@ -106,3 +106,43 @@ body {
   width: 60%;
 }
 
+/* Contact Form */
+.contact-heading2{
+  text-align: center;
+}
+.contact-form{
+  width: 34%;
+  margin: 0 auto;
+}
+.contact-field-wrapper {
+  margin: 15px 0;
+}
+.contact-field-wrapper label{
+  width: 125px;
+  display: inline-block;
+}
+.contact-field-wrapper input, .contact-field-wrapper textarea {
+  width: 260px;
+  padding: 10px 15px;
+}
+.contact-field-wrapper .query-label {
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+.contact-buttons-wrapper{
+  margin-left: 140px;
+}
+
+.contact-buttons-wrapper button{
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: solid 2px aqua;
+}
+
+.contact-buttons-wrapper button[type='submit']{
+  background-color: aqua;
+}
+.contact-buttons-wrapper button[type='reset']{
+  background-color: #fff;
+}
