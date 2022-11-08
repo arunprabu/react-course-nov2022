@@ -1,30 +1,36 @@
 /* External Styles */
+/* Font Embedding with CSS3 */
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url('../fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf') format("truetype");
+}
 
 body {
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: 'IBM Plex Sans';
 }
 
 /* util classes */
 .red {
   border: solid 1px red;
 }
-.clear{
+
+.clear {
   clear: both;
 }
 
 /* class selector -- recommended */
-.primary-header{
+.primary-header {
   width: 1180px;
   margin: 0 auto;
-  padding: 30px 0; 
+  padding: 30px 0;
 }
 
-.logo-link{
+.logo-link {
   width: 260px;
   display: inline-block;
 }
 
-.primary-nav{
+.primary-nav {
   display: inline-block;
   width: calc(100% - 270px);
   text-align: right;
@@ -54,13 +60,13 @@ body {
   height: 500px;
 }
 
-.hero-wrapper{
+.hero-wrapper {
   width: 1180px;
   padding: 8% 0;
   margin: 0 auto;
 }
 
-.quick-intro{
+.quick-intro {
   color: #2f78c4;
   font-size: 36px;
   line-height: 60px;
@@ -68,81 +74,147 @@ body {
   margin: 0 auto;
 }
 
-.jumbotron h1{
+.jumbotron h1 {
   color: #fff;
   font-size: 46px;
   margin-bottom: 16px;
 }
 
-.jumbotron p{
+.jumbotron p {
   color: #fff;
   font-size: 16px;
 }
 
-.jumbotron .c2a-btn{
+.jumbotron .c2a-btn {
   margin: 8px 0;
   display: inline-block;
   text-decoration: none;
 }
 
-.career-section{
+.career-section {
   width: 100%;
   background-color: darkblue;
   height: 100%;
   overflow: auto;
 }
 
-.career-wrapper{
+.career-wrapper {
   width: 1180px;
   margin: 0 auto;
 }
+
 .career-img {
   float: left;
   width: 40%;
 }
 
-.career-content{
+.career-content {
   float: left;
   width: 60%;
 }
 
 /* Contact Form */
-.contact-heading2{
+.contact-heading2 {
   text-align: center;
 }
-.contact-form{
+
+.contact-form {
   width: 34%;
   margin: 0 auto;
 }
+
 .contact-field-wrapper {
   margin: 15px 0;
 }
-.contact-field-wrapper label{
+
+.contact-field-wrapper label {
   width: 125px;
   display: inline-block;
 }
-.contact-field-wrapper input, .contact-field-wrapper textarea {
+
+.contact-field-wrapper input,
+.contact-field-wrapper textarea {
   width: 260px;
   padding: 10px 15px;
 }
+
 .contact-field-wrapper .query-label {
   vertical-align: top;
   padding-top: 10px;
 }
 
-.contact-buttons-wrapper{
+.contact-buttons-wrapper {
   margin-left: 140px;
 }
 
-.contact-buttons-wrapper button{
+.contact-buttons-wrapper button {
   padding: 10px 22px;
   border-radius: 30px;
   border: solid 2px aqua;
 }
 
-.contact-buttons-wrapper button[type='submit']{
+.contact-buttons-wrapper button[type='submit'] {
   background-color: aqua;
 }
-.contact-buttons-wrapper button[type='reset']{
+
+.contact-buttons-wrapper button[type='reset'] {
   background-color: #fff;
+}
+
+
+
+/* CSS 3 media query */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightyellow;
+  }
+
+  .primary-nav {
+    display: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: lightgreen;
+  }
+
+  .primary-nav {
+    display: none;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: lightpink;
+  }
+
+  .primary-nav {
+    display: inline-block;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: lightseagreen;
+  }
+
+  .primary-nav {
+    display: inline-block;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: lightcyan;
+  }
+
+  .primary-nav {
+    display: inline-block;
+  }
 }
