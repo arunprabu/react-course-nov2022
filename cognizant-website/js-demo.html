@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Demo</title>
+</head>
+<body>
+  <h1>JS | Event Handler and DOM Manipulation</h1>
+
+  <h5>Inline JS Demo</h5>
+  <button type="button" onclick="alert('Clicked');">Click Me #1</button>
+
+  <h5>Internal JS Demo</h5>
+  <button 
+    type="button" 
+    onclick="handleClickMeBtn2();">Click Me #2</button>
+
+  <h5>External JS Demo</h5>
+  <button 
+    type="button" 
+    onclick="handleClickMeBtn3(event);">Click Me #3</button>
+
+  <hr>
+
+  <div onclick="handleDivClick(event)">
+    Working with Event Object
+  </div>
+
+  <hr>
+  <div id="myDiv">
+    Click on the button to add a paragraph
+  </div>
+  
+  <button type="button" 
+          onclick="handleAddClick()">ADD</button>
+
+  <script src="./assets/scripts/main.js"></script>
+  <script>
+    function handleClickMeBtn2(){
+      alert('Clicked Btn #2');
+    }
+  </script>
+</body>
+</html>

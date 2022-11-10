@@ -44,8 +44,6 @@ CSS
 
 
 
-
-
 JS 
 --
   * Interaction Layer 
@@ -156,5 +154,141 @@ CSS
     
 ---
 
-Quick Intro to RWD 
+JS 
+--
+
+  ECMAScript (ES)
+  --
+    * Standard 
+    * Grammar 
+    
+    Implementation:
+      * JS, JScript, ActionScript, GoogleAppsScript, QtScript
+
+  --
+    Before 2015 
+    --
+    * JS / ES were not Object Oriented (no class keyword , no export, no import )
+
+    After 2015
+    ---
+      * JS / ES has become Object Oriented 
+      * class, import, export, extends 
+      
+---
+
+Types of Languages based on Datatyping 
+--
+  1. Strictly-typed Languages / Strongly-Typed Languages
+      Examples: Java, C#
+
+      Syntax: 
+        String myName = 'John'; 
+        myName = 'Steve'; // valid
+        myName = 100; // error 
+
+  2. Loosely-typed Languages
+      Examples: JavaScript, PHP, Python
+
+      Syntax in JS:
+        var myName = 'John'; 
+        myName = 'Steve'; // valid 
+        myName = 100; // valid 
+        myName = true;
+        myName = undefined;
+        myName = null;
+        myName = [];
+        myName = {};
+        myName = function() {
+
+        }
+
+      * Dynamically-typed language 
+
+JS 
+--
+  1. Inline JS 
+      
+  2. Internal JS 
+  3. External JS 
+
+TypeScript 
+---
+  TS = JS + Datatyping  
+
+  SYNTAX IN TS
+  --
+    1. Explicit DataTyping  
+      var x: number = 10;
+      x = 100; // valid 
+      x = true; // error 
+    
+  ---
+    2. Implicit DataTyping 
+    var myName = "John"; 
+    myName = true; // error  
+
+  --
+
+  var y; 
+  y = 10; // valid 
+  y = true; /// valid 
+
+---
+
+  Some More Datatypes 
+  ---
+    var x: number = 10;
+    var myName: string = "John";
+    var isValid: boolean = true;
+    var u: undefined;
+    var n: null = null; 
+    var colors: string[] = ['red', 'green', 'blue'];
+    var colors: Array<string> = ['red', 'green', 'blue'];
+
+
+  TypeScript Compiler (TSC)
+  --
+    TS => (TSC) => JS 
+
+
+---
+
+ReactJS 
+---
+  HTML
+  CSS 
+  JS 
+  ES2015 
+
+  NodeJS Ecosystem (30 mins - 50 mins)
+  
+  Webapps 
+  --
+    1. Server Side Rendering Apps (SSR)
+        * Pages will reload / refresh 
+
+        Arch
+        ---
+        1 Server -- port number: 8080 
+        
+        Tech Stack
+        ---
+          Front End (HTML, CSS, JS) + Back End (Java/.Net/PHP/...)
+
+        Server's Response: HTML, CSS, JS + Data
+
+        Disadv
+        --
+          1. Pages will reload / refresh 
+          2. Server has to do the heavy-lifting (Slower webapps)
+          3. Not a better UX 
+          4. Bandwidth Consumption is more 
+          5. Expensive 
+
+    2. Client Side Rendering Apps (CSR)
+        
+
+
+
 
