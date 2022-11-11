@@ -265,14 +265,14 @@ ReactJS
   
   Webapps 
   --
-    1. Server Side Rendering Apps (SSR)
+    1. Server Side Rendering Apps (SSR) / Traditional Webapps 
         * Pages will reload / refresh 
 
         Arch
         ---
         1 Server -- port number: 8080 
         
-        Tech Stack
+        Source Code
         ---
           Front End (HTML, CSS, JS) + Back End (Java/.Net/PHP/...)
 
@@ -286,9 +286,77 @@ ReactJS
           4. Bandwidth Consumption is more 
           5. Expensive 
 
-    2. Client Side Rendering Apps (CSR)
+    2. Client Side Rendering Apps (CSR) / Modern Webapps 
+         * Pages will NOT reload / refresh 
+
+         Arch 
+         ---
+          2 Servers 
+            1 Server - Front End App 
+                port number: 4000
+                Server's Response: HTML, CSS, JS, wait for data 
+            
+            1 Server - Back End App 
+                port number: 8080 
+                Server's Response: Data (JSON)
+
+          Source Code 
+          ---
+            Front End App (Single Page App - SPA)
+              HTML, CSS, JS 
+            
+            Back End App (RESTful API)
+              Java/.Net/PHP/Perl/Python/Ruby/NodeJS
+
         
+Single Page App (SPA)
+---
+  7 Characteristics 
+  ---
+    1. Pages will not reload/refresh 
+    2. URL should be changed 
+    3. Browser History should be maintained 
+    4. Retain Header and Footer 
+    5. The content in b/w header and footer should be updated 
+    6. Active menu should be set 
+    7. Page Title should be changed 
+
+  SPA Library/Frameworks 
+  ---
+    #1 React JS     - Library 
+    #2 VueJS        - Framework
+    #3 Angular      - Framework 
 
 
+Dependencies
+---
+  1. Project Dependencies 
+      * some packages are needed for the app's functionality to work after deployment
+      * will be tracked in dependencies in package.json 
+
+      examples: 
+        bootstrap, dropzone, datatables.net 
+
+      commands (all the below are same)
+      ---
+        npm i bootstrap 
+        npm install bootstrap 
+        npm i bootstrap --save 
+        npm i --save bootstrap
+        npm i bootstrap -S 
 
 
+  2. Development Dependencies 
+      * some packages are needed during development 
+      * will be tracked in devDependencies in package.json 
+
+      examples: 
+      --
+        sass, typescript, webpack, vite
+
+      commands (all the below are same)
+      --
+        npm i sass --save-dev 
+        npm install sass --save-dev 
+        npm i sass -D
+        npm i -D sass 
