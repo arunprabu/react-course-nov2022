@@ -1,3 +1,4 @@
+import LatestMovieList from "../../containers/LatestMovieList/LatestMovieList";
 import FeaturedShow from "./FeaturedShow/FeaturedShow";
 
 const Home = () => {
@@ -32,15 +33,27 @@ const Home = () => {
         ranking="1"
         showTitle="Eng Vs Pak Final"
         category="Sports"
-        description="That's probably a wrap from the 2022 T20 World Cup."
-        releasedOn="yesterday"></FeaturedShow>
+        releasedOn="yesterday">
+        That's probably a wrap from the 2022 T20 World Cup.
+      </FeaturedShow>
       <FeaturedShow
         ranking="2"
         showTitle="Man Vs Wild by Bear Grylls"
         category="Infotainment"
-        description="A wild adventureous infotainment show"
-        releasedOn="2 days ago"></FeaturedShow>
+        releasedOn="2 days ago">
+        A wild adventureous infotainment show
+      </FeaturedShow>
+      <FeaturedShow
+        ranking="3"
+        showTitle="Planet Earth II by David Attenborough"
+        category="Infotainment"
+        releasedOn="3 days ago">
+        A show by BBC Earth!
+      </FeaturedShow>
 
+      <h2>Latest Movie List | Class Comp + States + Events Demo</h2>
+      <LatestMovieList />
+      
     </div>
   )
 }
