@@ -1,0 +1,55 @@
+ReactJS 
+---
+  Components
+  ---
+    1. Functional Components
+        * coded as functions
+
+        1.1 Functional components with Named Function
+        1.2 Functional components with Anonymous Function
+        1.3 Functional components with Arrow Function
+
+    2. Class Components
+
+
+  Concepts
+  ---
+    Thinking in React 
+    Components 
+      Props 
+      States 
+      Events 
+      List and Keys 
+
+    Data Binding 
+    Cross Component Communication
+      1. Parent to Child Component Communication
+        using Props 
+      2. Child to Parent Component Communication
+        using Props + Events + ... 
+      3. Any to Any Component Communication 
+        3.1 using ContextAPI + Hooks 
+        3.2 using ReduxJS/Flux/MobX 
+
+    Styling 
+    Routing 
+    Unit Testing 
+
+
+    
+
+
+
+Project Structure
+---
+  src/
+    components/
+      shared/
+        Header/
+        Footer/
+        Menu/
+      Home/
+    App.js 
+    App.css 
+    index.js 
+    index.css 

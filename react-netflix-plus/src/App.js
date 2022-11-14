@@ -1,7 +1,8 @@
 // App Comp 
 import './App.css'; // external css (css is optional)
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import Header from './components/shared/Header/Header';
+import Footer from './components/shared/Footer/Footer';
+import Home from './components/Home/Home';
 
 // comp defn 
 function App() {
@@ -9,9 +10,11 @@ function App() {
   return(
     <div>
       <Header></Header>
-      <div className="mt-5">
-        <h1>Success!</h1>
+
+      <div className="mt-5 container">
+        <Home/>
       </div>
+      
       <Footer />
     </div>
   )
