@@ -1,4 +1,5 @@
 import LatestMovieList from "../../containers/LatestMovieList/LatestMovieList";
+import TrendingShowList from "../../containers/TrendingShowList/TrendingShowList";
 import FeaturedShow from "./FeaturedShow/FeaturedShow";
 
 const Home = () => {
@@ -53,6 +54,9 @@ const Home = () => {
 
       <h2>Latest Movie List | Class Comp + States + Events Demo</h2>
       <LatestMovieList />
+
+      <h2>Trending Show List | Class Comp + States + Events + Conditional Rendering + Lists and Keys Demo</h2>
+      <TrendingShowList />
       
     </div>
   )
