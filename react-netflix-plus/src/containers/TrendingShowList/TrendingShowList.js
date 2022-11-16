@@ -32,6 +32,21 @@ class TrendingShowList extends Component {
     }
   }
 
+  handleAddToWatchlist(index){
+    console.log('Inside handleAddToWatchlist');
+
+    console.log(this);
+    console.log(index);
+
+    // working with state immutably
+    let duplicateShows = [...this.state.shows ]; // shallow copy
+    duplicateShows[index].isInWatchlist = !duplicateShows[index].isInWatchlist;
+    console.log(duplicateShows);
+
+    this.setState({
+      shows: duplicateShows
+    });
+  }
 
   render() {
 
@@ -49,11 +64,10 @@ class TrendingShowList extends Component {
     // if it is an array and the  shows length > 0
     let showList = null;
     if ((Array.isArray(this.state.shows) && this.state.shows.length) > 0){
-      showList = this.state.shows.map((show) => {
-        console.log(show);
+      showList = this.state.shows.map((show, index) => {
         return (
           <div className='col-md-3' key={show.id}>
-            <div className="card">
+            <div className="card" >
               <img src={show.thumbnailURL} className="card-img-top"
                 alt={show.name} />
               <div className="card-body">
@@ -61,8 +75,10 @@ class TrendingShowList extends Component {
                 <p className="card-text">
                   {show.desc}
                 </p>
-                <button type="button" className="btn btn-primary">
-                  Add to Watchlist
+                <button type="button"
+                  className="btn btn-primary"
+                  onClick={this.handleAddToWatchlist.bind(this, index)}>
+                  {show.isInWatchlist ? 'In Watchlist' : 'Add to Watchlist'}
                 </button>
               </div>
             </div>

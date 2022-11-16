@@ -1,17 +1,36 @@
 // Functional component with Arrow Function
 
+import { Link } from "react-router-dom";
+import MenuItem from "./MenuItem/MenuItem";
+
 const Menu = () => {
+  const navMenus = [
+    { 
+      title: 'Home', url: '/'
+    },
+    {
+      title: 'About', url: '/about'
+    },
+    {
+      title: 'Contact', url: '/contact'
+    },
+    {
+      title: 'Styled Comp Demo', url: '/styled-comp-demo'
+    }
+  ];
+
   return(
     <ul className="navbar-nav me-auto mb-2 mb-md-0">
-      <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="#">Home</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#">About</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link">Contact</a>
-      </li>
+      {
+        navMenus.map( (navMenu) => {
+          return(
+            <MenuItem 
+              key={navMenu.title} 
+              {...navMenu} /> 
+              /* sending all props down to MenuItem */
+          )
+        })
+      }
     </ul>
   )
 }

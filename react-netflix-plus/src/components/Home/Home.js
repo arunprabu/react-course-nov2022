@@ -1,10 +1,14 @@
 import LatestMovieList from "../../containers/LatestMovieList/LatestMovieList";
+import LifeCycleDemo from "../../containers/LifeCycleDemo/LifeCycleDemo";
+import MyProfile from "../../containers/MyProfile/MyProfile";
 import TrendingShowList from "../../containers/TrendingShowList/TrendingShowList";
 import FeaturedShow from "./FeaturedShow/FeaturedShow";
+import Subscription from "./Subscription/Subscription";
 
 const Home = () => {
+
   return(
-    <div>
+    <>
       <div className="px-4 py-5 my-5 text-center">
         <img
           className="d-block mx-auto mb-4"
@@ -57,8 +61,20 @@ const Home = () => {
 
       <h2>Trending Show List | Class Comp + States + Events + Conditional Rendering + Lists and Keys Demo</h2>
       <TrendingShowList />
+
+      <hr/>
+      <h2>Subscription | Styling in ReactJS -Demo</h2>
+      <Subscription />
+
+      <hr/>
+      <h2>MyProfile | Two Way Binding</h2>
+      <MyProfile/>
+
+      <hr/>
+      <h2>LifeCycle Hooks Demo</h2>
+      <LifeCycleDemo />
       
-    </div>
+    </>
   )
 }
 

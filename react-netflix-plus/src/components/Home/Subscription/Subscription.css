@@ -1,0 +1,7 @@
+/* Extenal, Comp-specific styles */
+.subscription-info{
+  background-color: aqua;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}

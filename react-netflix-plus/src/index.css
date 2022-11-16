@@ -1,3 +1,6 @@
+/* external styles -- app-wide */
+/* ideal place for you to override bootstrao styles */
+
 body {
   margin: 0;
 }

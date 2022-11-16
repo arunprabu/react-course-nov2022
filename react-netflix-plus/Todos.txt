@@ -1,3 +1,5 @@
 1. Explore how to start the server in different port number.
 2. Learn about integrating bootstrap properly in React App 
-  
+3. Active menu should be set (related to routing)
+4. Page title should be set (use react-helmet package)
+

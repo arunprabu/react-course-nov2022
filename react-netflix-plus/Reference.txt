@@ -18,16 +18,83 @@ ReactJS
         * are smart components and containers 
 
 
+       
+Single Page App (SPA)
+---
+  7 Characteristics 
+  ---
+    1. Pages should not reload/refresh [DONE]
+    2. URL should be changed [DONE]
+    3. Browser History should be maintained [DONE]
+    4. Retain Header and Footer [DONE]
+    5. The content in b/w header and footer should be updated [DONE]
+    6. Active menu should be set [TODO]
+    7. Page Title should be changed [TODO]
+
+
+Routing 
+---
+  Step 0:
+  --
+    Identify the menus
+
+    Menu: Home      URL:localhost:3000/      
+    Menu: About     URL:localhost:3000/about       
+    Menu: Contact   URL:localhost:3000/contact 
+
+  Step 1:
+  --- 
+    Let's setup the URLs in Menu comp 
+
+  Step 2:
+  ---
+    npm i react-router-dom 
+
+  Step 3:
+  --
+    Identify the URLs and matching components
+
+    localhost:3000/         -- Home Component 
+    localhost:3000/about    -- About Component
+    localhost:3000/contact  -- Contact Component
+
+    We need to create Home, About and Contact Components
+
+  Step 4:
+  --
+    Let's configure the URL in App.js 
+    
+    <BrowserRouter>
+      <div>
+        <Header></Header>
+
+        <div className="mt-5 container">
+          <Routes>
+            <Route path='/' element={ <Home /> }/>
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+          </Routes>
+        </div>
+        
+        <Footer />
+      </div>
+    </BrowserRouter>
+
+  Step 5: 
+  --
+    Check the app. Pages will refresh. Fix it by replacing <a href> with <Link to>
+--
+
+
   Concepts
   ---
     Thinking in React 
     Components 
       Props [DONE]
-      States 
-        
-          * Not available in Functional Components 
-      Events 
-      List and Keys 
+      States [DONE]
+          * available in both type of Components 
+      Events [DONE]
+      List and Keys [DONE]
 
     Data Binding 
     Cross Component Communication
@@ -39,9 +106,27 @@ ReactJS
         3.1 using ContextAPI + Hooks 
         3.2 using ReduxJS/Flux/MobX 
 
-    Styling 
-    Routing 
-    Unit Testing 
+    Styling [DONE]
+    Two Way Binding [DONE]
+    Lifecycle Hooks [DONE]
+    Routing [DONE]
+    Child to Parent Comp Commn[TODO]
+
+    Fragments [DONE]
+    StyledComponents 
+
+    Thursday
+    ---
+    Typechecking With PropTypes
+    Error Boundary
+    HOC 
+    Hooks 
+
+    Friday 
+    ---
+    Unit Testing
+    
+    
 
 
     
