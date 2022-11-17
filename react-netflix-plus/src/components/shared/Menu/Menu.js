@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import MenuItem from "./MenuItem/MenuItem";
 
 const Menu = () => {
+
   const navMenus = [
     { 
       title: 'Home', url: '/'
@@ -12,10 +13,16 @@ const Menu = () => {
       title: 'About', url: '/about'
     },
     {
-      title: 'Contact', url: '/contact'
+      title: 'Contact', url: '/contact' 
     },
     {
-      title: 'Styled Comp Demo', url: '/styled-comp-demo'
+      title: 'Styled Comp Demo', url: '/styled-comp-demo' 
+    },
+    {
+      title: 'HOC Demo', url: '/hoc-demo'
+    },
+    {
+      title: 'Hooks Demo', url: '/hooks'
     }
   ];
 

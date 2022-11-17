@@ -1,24 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
+import ErrorBoundary from '../../containers/shared/ErrorBoundary/ErrorBoundary';
+import Calculator from './Calculator/Calculator';
 
 const About = () => {
-
-  const Heading1 = styled.h1`
-    color: red;
-    text-align: center;
-  `;
-
-  const MyPara = styled.p`
-    color: green;
-    font-weight: bold;
-    font-size: 15px;
-  `
-
+  
   return (
     <>
-      <div>About</div>
-      <Heading1>About us</Heading1>
-      <MyPara>Checking para</MyPara>
+      <h1>Error Boundary Demo</h1>
+      <ErrorBoundary>
+        <Calculator />
+      </ErrorBoundary>
     </>
   )
 }

@@ -7,6 +7,9 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import StyledCompDemo from './components/StyledCompDemo/StyledCompDemo';
+import HocDemo from './components/HocDemo/HocDemo';
+import ErrorBoundary from './containers/shared/ErrorBoundary/ErrorBoundary';
+import HooksDemo from './components/HooksDemo/HooksDemo';
 
 
 // comp defn 
@@ -23,6 +26,8 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/styled-comp-demo' element={<StyledCompDemo />} />
+            <Route path='/hoc-demo' element={<HocDemo />} />
+            <Route path='/hooks' element={<HooksDemo />} />
           </Routes>
         </div>
         
