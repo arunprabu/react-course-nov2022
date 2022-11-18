@@ -10,6 +10,7 @@ import StyledCompDemo from './components/StyledCompDemo/StyledCompDemo';
 import HocDemo from './components/HocDemo/HocDemo';
 import ErrorBoundary from './containers/shared/ErrorBoundary/ErrorBoundary';
 import HooksDemo from './components/HooksDemo/HooksDemo';
+import Products from './components/Products/Products';
 
 
 // comp defn 
@@ -28,6 +29,7 @@ function App() {
             <Route path='/styled-comp-demo' element={<StyledCompDemo />} />
             <Route path='/hoc-demo' element={<HocDemo />} />
             <Route path='/hooks' element={<HooksDemo />} />
+            <Route path='/products' element={<Products />} />
           </Routes>
         </div>
         

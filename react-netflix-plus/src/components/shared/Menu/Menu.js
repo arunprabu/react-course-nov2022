@@ -23,6 +23,9 @@ const Menu = () => {
     },
     {
       title: 'Hooks Demo', url: '/hooks'
+    },
+    {
+      title: 'Products (Context API Demo)', url: '/products'
     }
   ];
 
