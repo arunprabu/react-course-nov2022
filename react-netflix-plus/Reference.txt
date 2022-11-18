@@ -279,8 +279,8 @@ Rules of Hooks
 
 Functionality
 Responsive 
-Code Quality (format, comments, best practices)
-Naming Conventions 
+Code Quality (format, comments, best practices, Naming Conventions )
+Code Duplication
 Unit Testing 
 
 
