@@ -13,10 +13,10 @@ const Todos = () => {
       </div>
 
       <div className='row'>
-        <div className='col-auto'>
-          <ul>
-            <li>todo 1</li>
-            <li>todo 2</li>
+        <div className='col-md-3'>
+          <ul className='list-group'>
+            <li className='list-group-item'>todo 1</li>
+            <li className='list-group-item'>todo 2</li>
           </ul>
         </div>
       </div>
