@@ -1,9 +1,17 @@
 // Functional component with Named Function
 
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../../contexts/CartContext";
 import Menu from "../Menu/Menu";
 
 function Header(){
   const appName = 'React App';
+
+  // Step 3 of Context API Demo
+  const cartData = useContext(CartContext);
+  console.log(cartData.cartState);
+
   return(
     <header>
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -14,11 +22,10 @@ function Header(){
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <Menu />
-            <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="Search" 
-              aria-label="Search" />
-              <button className="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <Link to='/'
+              className="btn btn-danger">
+              Cart({cartData?.cartState?.length > 0 ? cartData?.cartState?.length: 0})
+            </Link>
           </div>
         </div>
       </nav>

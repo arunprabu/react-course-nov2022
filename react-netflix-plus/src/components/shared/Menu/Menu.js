@@ -13,7 +13,7 @@ const Menu = () => {
       title: 'About', url: '/about'
     },
     {
-      title: 'Contact', url: '/contact' 
+      title: 'Contacts', url: '/contacts' 
     },
     {
       title: 'Styled Comp Demo', url: '/styled-comp-demo' 

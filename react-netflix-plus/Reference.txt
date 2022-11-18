@@ -248,18 +248,26 @@ For more refer: https://kentcdodds.com/blog/usememo-and-usecallback
 Important one for performance optimization
 
 ---
-useContext()
-Let's us share data across components 
+useContext() - Hooks 
 
-Step 1: create context with any data or even null inside 
-Refer: PageContext.js 
+  Context API - Steps 
+  ---
+    Let's share the data across comp 
 
-Step 2: Provide the data to the list of components you want to share 
-Check App.js 
+    1. Create context with any data or null 
+        createContext()
 
-Step 3: Using <PageContext.Provider> to share the data across the few components 
+    2. Provide the data to the whole app -- it is called as app wide data 
+        Using  
+        <Context.Provider value={ }>
+          <App />
+        </Context.Provider>
+        
+    3. Consume the context data in your comps 
+        useContext();
 
-Step 4: Consume it in both Home.js and About.js 
+===
+
   ----
 
 
@@ -267,3 +275,30 @@ Step 4: Consume it in both Home.js and About.js
 Rules of Hooks 
   Refer: 
   https://reactjs.org/docs/hooks-rules.html
+
+
+Functionality
+Responsive 
+Code Quality (format, comments, best practices)
+Naming Conventions 
+Unit Testing 
+
+
+
+---
+Naming Conventions
+---
+  * Variables, Methods - camelCase
+  * string, number, obj - appName, phone, contact
+  * boolean - isValid, isLoggedIn, hasToken, isAuth
+  * arrays - colors, contacts or colorList, contactList
+  * Components, Classes - PascalCase
+  * File Names of Components - PascalCase
+  * Folder Namesof Components  - PascalCase
+  * Event Handlers - camelCase 
+    Should have handle prefix or Handler Suffix
+      handleAddToFav() or else addToFavHandler()
+  * Never use snake_case --
+  * SNAKE_CASE  -- is okay for constants (with all caps), enum (with all caps)
+
+--

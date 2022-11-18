@@ -1,9 +1,9 @@
 // Functional component with Anonymous Function
-
 import Menu from "../Menu/Menu"
 
 const Footer = function(){
   const copyrightYear = 2023;
+
 
   return(
     <footer className="text-center">

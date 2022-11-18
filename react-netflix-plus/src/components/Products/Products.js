@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useContext, useReducer } from 'react'
+import { CartContext } from '../../contexts/CartContext';
+import cartReducer from '../../reducers/cartReducer';
 
 const Products = () => {
+
+  const cartData = useContext(CartContext);
+  console.log(cartData);
 
   const pdtList = [
     {
@@ -19,24 +24,43 @@ const Products = () => {
     }
   ];
 
+  const handleAddToCart = (pdt) => {
+    console.log(pdt);
+    cartData.cartDispatch({
+      type: 'ADD_TO_CART',
+      payload: pdt
+    })
+  }
+
+  let products = null;
+  if(Array.isArray(pdtList) && pdtList.length > 0){
+    products = pdtList.map((pdt) => {
+      return (
+        <div className='col-md-3' key={pdt.id}>
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">{pdt.productName}</h5>
+              <p className="card-text">
+                {pdt.productDescription}
+              </p>
+              <p>Rs. {pdt.price}</p>
+              <button className="btn btn-primary" 
+                onClick={handleAddToCart.bind(this, pdt)}>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      )
+    })
+  }
+  
+
   return (
     <div className='row pt-3'>
       <h1>Products - Context API Demo</h1>
-      
-      <div className='col-md-3'>
-        <div className="card">
-          <div className="card-body">
-            <h5 className="card-title">pdt name</h5>
-            <p className="card-text">
-              desc
-            </p>
-            <p>Rs. 15000</p>
-            <button className="btn btn-primary">
-              Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
+
+      {products}
 
     </div>
   )

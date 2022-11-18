@@ -1,3 +1,5 @@
+import React from "react";
+
 import LatestMovieList from "../../containers/LatestMovieList/LatestMovieList";
 import LifeCycleDemo from "../../containers/LifeCycleDemo/LifeCycleDemo";
 import MyProfile from "../../containers/MyProfile/MyProfile";
