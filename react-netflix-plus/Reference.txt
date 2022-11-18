@@ -232,7 +232,7 @@ Don’t call Hooks from regular JavaScript functions.
 =======================
 
 useState() Hook 
----
+--- 
 
 useEffect() - Hook 
   is what componentDidMount and componentDidUpdate to class comp 
