@@ -119,14 +119,9 @@ Routing
     
     HOC [DONE]
     Error Boundary [DONE]
+    Hooks [DONE]
     
-    Thursday
-    ---
-    Hooks 
-
-    Friday 
-    ---
-    Hooks
+    
     Unit Testing
 
     Monday
@@ -302,3 +297,12 @@ Naming Conventions
   * SNAKE_CASE  -- is okay for constants (with all caps), enum (with all caps)
 
 --
+
+HTTP methods
+---
+  POST - Create an Employee 
+  GET  - Listing Employees /Fetching Employee Details 
+  PUT  - Updating an Employee 
+  PATCH  - Updating an Employee 
+  DELETE - Deleting an Employee 
+

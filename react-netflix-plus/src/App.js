@@ -13,6 +13,7 @@ import { CartContext } from './contexts/CartContext';
 import { useReducer } from 'react';
 import cartReducer from './reducers/cartReducer';
 import Contacts from './components/Contacts/Contacts';
+import UnitTestingDemo from './components/UnitTestingDemo/UnitTestingDemo';
 
 // comp defn 
 function App() {
@@ -42,6 +43,7 @@ function App() {
               <Route path='/hoc-demo' element={<HocDemo />} />
               <Route path='/hooks' element={<HooksDemo />} />
               <Route path='/products' element={<Products />} />
+              <Route path='/unit-testing-demo' element={<UnitTestingDemo />} />
             </Routes>
           </div>
           

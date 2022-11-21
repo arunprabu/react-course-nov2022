@@ -26,6 +26,9 @@ const Menu = () => {
     },
     {
       title: 'Products (Context API Demo)', url: '/products'
+    },
+    {
+      title: 'Unit Testing Demo', url: '/unit-testing-demo'
     }
   ];
 
