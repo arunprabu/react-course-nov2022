@@ -2,18 +2,11 @@
 import './App.css'; // external css (css is optional)
 import Header from './components/shared/Header/Header';
 import Footer from './components/shared/Footer/Footer';
-import Home from './components/Home/Home';
-import About from './components/About/About';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import StyledCompDemo from './components/StyledCompDemo/StyledCompDemo';
-import HocDemo from './components/HocDemo/HocDemo';
-import HooksDemo from './components/HooksDemo/HooksDemo';
-import Products from './components/Products/Products';
+import { BrowserRouter } from 'react-router-dom';
 import { CartContext } from './contexts/CartContext';
 import { useReducer } from 'react';
 import cartReducer from './reducers/cartReducer';
-import Contacts from './components/Contacts/Contacts';
-import UnitTestingDemo from './components/UnitTestingDemo/UnitTestingDemo';
+import { appRoutes } from './routes/appRoutes';
 
 // comp defn 
 function App() {
@@ -35,16 +28,8 @@ function App() {
           <Header></Header>
 
           <div className="mt-5 container">
-            <Routes>
-              <Route path='/' element={ <Home /> } />
-              <Route path='/about' element={<About />} />
-              <Route path='/contacts' element={<Contacts />} />
-              <Route path='/styled-comp-demo' element={<StyledCompDemo />} />
-              <Route path='/hoc-demo' element={<HocDemo />} />
-              <Route path='/hooks' element={<HooksDemo />} />
-              <Route path='/products' element={<Products />} />
-              <Route path='/unit-testing-demo' element={<UnitTestingDemo />} />
-            </Routes>
+            <p>welcome</p>
+            {appRoutes }
           </div>
           
           <Footer />
