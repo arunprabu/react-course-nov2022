@@ -29,6 +29,7 @@ const Users = () => {
                 <h6 className="card-subtitle mb-2 text-muted">{user.phone}</h6>
                 <p className="card-text">{user.email}</p>
               </div>
+              <hr/>
             </div>
           )
         })
