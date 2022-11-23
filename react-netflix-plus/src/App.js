@@ -28,7 +28,6 @@ function App() {
           <Header></Header>
 
           <div className="mt-5 container">
-            <p>welcome</p>
             {appRoutes }
           </div>
           

@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompanyInfo has right snapshot of CompanyInfo Component 1`] = `
+<div>
+  <h2>
+    CompanyInfo | Testing Props, Styles, Placeholder text, Events, States, Snapshot!
+  </h2>
+  <h3
+    data-testid="companyNameHeading"
+  >
+    Google Inc
+  </h3>
+  <p
+    data-testid="foundedYear"
+  >
+    Founded In: 
+    1996
+  </p>
+  <p
+    data-testid="employeeCountEl"
+    style={
+      Object {
+        "color": "rgb(0, 255, 0)",
+      }
+    }
+  >
+    Total Employees: 
+    350000
+  </p>
+  <button
+    className="btn btn-primary btn-lg"
+    data-testid="joinCognizantBtn"
+    type="button"
+  >
+    JOIN COGNIZANT
+  </button>
+  <br />
+  <br />
+  <input
+    onChange={[Function]}
+    placeholder="Enter Your Country Name"
+    type="text"
+    value="Canada"
+  />
+  <p
+    data-testid="visitWebsiteEl"
+  >
+    Visit Cognizant 
+    Canada
+     website
+  </p>
+  <hr />
+  <p
+    data-testid="workingLocationInfo"
+  >
+    I am working in 
+    Bangalore
+  </p>
+  <input
+    className="form-control"
+    onChange={[Function]}
+    placeholder="Enter the location you want to relocate to"
+    type="text"
+    value=""
+  />
+  <br />
+  <button
+    className="btn btn-secondary"
+    data-testid="relocateBtn"
+    onClick={[Function]}
+    type="button"
+  >
+    Relocate
+  </button>
+</div>
+`;
