@@ -1,5 +1,6 @@
 import React from 'react'
 import CompanyInfo from './CompanyInfo/CompanyInfo'
+import Posts from './Posts/Posts'
 import Users from './Users/Users'
 
 const UnitTestingDemo = () => {
@@ -14,6 +15,8 @@ const UnitTestingDemo = () => {
         employeeCount="350000+"/>
 
       <Users />
+
+      <Posts />
     </div>
   )
 }

@@ -16,6 +16,6 @@ export const fetchApi = (apiUrl) => {
     })
     .catch( (err) => {
       console.log(err);
+      return err;
     })
-
 }

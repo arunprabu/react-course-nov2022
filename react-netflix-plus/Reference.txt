@@ -306,3 +306,113 @@ HTTP methods
   PATCH  - Updating an Employee 
   DELETE - Deleting an Employee 
 
+
+===
+
+Traditional Software Development Approach 
+------
+  Requirements 
+    Designing 
+      Development 
+        Testing 
+          Deployment 
+            Maintanance 
+
+Dev => QA => (bugs[50]) => Dev => QA => (bugs [20]) => Dev => QA => (bugs [5]) => Dev => QA => (no bugs) => (QA PASSED) => Deployment 
+
+Project: Calculator 
+---
+  Features: Addition 
+
+  Development
+  ---
+    Prepare: Test Cases / Test specs 
+      1. Add should take in only numbers as inputs 
+      2. Add should give number as output 
+      3. Into add if invalid input are entered disabled add button 
+
+    function add(a, b){
+      if(typeof a == 'number' && typeof b == 'number'){
+        return a + b;
+      }
+    }
+
+    add(10, 20); // 30
+    add("10", 20); // no bug 
+    add('ABC', 20); // no bug 
+    add('****', '$$$$'); // no bug
+  
+    Ref: FRD 
+
+
+  ----
+=========
+
+Modern Software Development Approaches  
+  1. Test-Driven Development (TDD)
+  2. Behaviour-Driven Development (BDD)
+
+  Test Cases => Dev => (Tools) => (no bug) => [CODE COMPLETE]
+
+Automation Testing 
+---
+  0. Static Type Checking (TS / FlowJS / PropTypes )
+  1. Unit Testing  (Will learn)
+        * testing tiny, independent unit of our component
+        * testing the comp in isolation 
+        * Bug Reduction Density: 40-80% 
+        
+        Tools: 
+        --- 
+          JEST JS (Unit Testing Framework + Test runner)
+          React Testing Library (RTL)
+
+          EnzymeJS (No official support for React JS v 18 projects)
+
+  2. Integration Testing
+        * testing the component by integrating multiple components together 
+        * testing the comp with service calls as well
+
+        Tools:
+        --
+          JEST JS (Unit Testing Framework + Test runner)
+          React Testing Library (RTL)
+
+          EnzymeJS (No official support for React JS v 18 projects)
+
+  3. End 2 End (e2e) Testing 
+        * Testing the whole app as one entity 
+        Tools:
+        ---
+          * Selenium 
+          * CypressJS 
+          * Protractor 
+
+Testing Patterns: 
+-----
+  1. AAA (Arrange/Act/Assert)
+      * JEST 
+  2. Given / When / Then 
+      * JasmineJS 
+ 
+--
+
+1. How to write test specs?
+2. Where to write test specs? (in test file )
+3. How to make use of the Jest? 
+
+
+---
+
+Unit Testing in ReactJS 
+--
+  1. Testing JSX [DONE]
+  2. Props [DONE]
+  3. Test placeholder [DONE]
+  4. CSS styles [DONE]
+  5. CSS class [DONE]
+  6. Events [DONE]
+  7. States [DONE]
+  8. Snapshot [DONE]
+  9. Testing API calls 
+  10. Mocking 

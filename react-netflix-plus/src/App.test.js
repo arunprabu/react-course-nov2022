@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react';
 import App from './App'; // What comp are we taking up for testing?
 
 // Test Suite = Group of related test specs
-describe('App', () => {
+xdescribe('App', () => {
 
   // #1 test spec
   test('has proper App comp', () => {
