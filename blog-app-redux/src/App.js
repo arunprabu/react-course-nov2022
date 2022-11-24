@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.scss';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Home from './components/Home/Home';
+import Posts from './components/Posts/Posts';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import PostDetails from './components/Posts/PostDetails/PostDetails';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Header /> 
+
+        <main className="container mt-5 pt-5">
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/posts' element={<Posts />} />
+            <Route path='/posts/:postId' element={<PostDetails />} /> {/* URL param - postId */}
+          </Routes>
+        </main>
+
+        <Footer />
+
+      </div>
+    </BrowserRouter>
   );
 }
 

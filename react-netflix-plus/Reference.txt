@@ -414,5 +414,20 @@ Unit Testing in ReactJS
   6. Events [DONE]
   7. States [DONE]
   8. Snapshot [DONE]
-  9. Testing API calls 
-  10. Mocking 
+  9. Testing API calls [DONE]
+  10. Mocking [DONE]
+  11. Spy [DONE]
+
+
+
+Build Checklist
+---
+  1. check console for errors and fix
+  2. remove all console.logs 
+  3. fix all warnings that you will find in console 
+  4. have zero linting errors 
+
+then, npm run build 
+--
+
+  
