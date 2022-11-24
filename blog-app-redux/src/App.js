@@ -6,8 +6,6 @@ import Posts from './components/Posts/Posts';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PostDetails from './components/Posts/PostDetails/PostDetails';
 
-
-
 function App() {
   return (
     <BrowserRouter>

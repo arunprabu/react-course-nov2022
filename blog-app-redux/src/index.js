@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createBrowserHistory } from 'history'; // npm i history
 
 import 'bootstrap/dist/css/bootstrap.css';
 
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import configureStore from './configureStore';
+
+const history = createBrowserHistory();
+
+//Step 7: get the store data with history as well. initial state can be passed later 
+const store = configureStore(history);
+console.log(store);
 
 ReactDOM.render(
   <React.StrictMode>

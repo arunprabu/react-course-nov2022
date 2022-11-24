@@ -22,3 +22,5 @@ export const UPDATE_ERROR = '@@posts/UPDATE_ERROR';
 export const DELETE_REQUEST = '@@posts/DELETE_REQUEST';
 export const DELETE_SUCCESS = '@@posts/DELETE_SUCCESS';
 export const DELETE_ERROR = '@@posts/DELETE_ERROR';
+
+// For Step 4: Refer store/posts/reducer.js 
