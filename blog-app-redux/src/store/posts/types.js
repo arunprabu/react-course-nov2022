@@ -1,5 +1,8 @@
 // Step 3: Let's have all possible action types specific to posts feature
 
+// Define whatever naming conventions you'd like for your action types, but
+// personally, I use the `@@context/ACTION_TYPE` convention, to follow the convention
+// of Redux's `@@INIT` action.
 export const CREATE_REQUEST = '@@posts/CREATE_REQUEST';
 export const CREATE_SUCCESS = '@@posts/CREATE_SUCCESS';
 export const CREATE_ERROR = '@@posts/CREATE_ERROR';
