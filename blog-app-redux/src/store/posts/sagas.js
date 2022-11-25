@@ -42,7 +42,6 @@ function* postsSaga(){
 
   yield all([
     fork(watchFetchRequest)
-    fork(watchCreateRequest)
   ])
 }
 
