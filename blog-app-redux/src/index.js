@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history'; // npm i history
+import { Provider } from 'react-redux';
 
 import 'bootstrap/dist/css/bootstrap.css';
-
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -15,9 +15,12 @@ const history = createBrowserHistory();
 const store = configureStore(history);
 console.log(store);
 
+// Step 8: Let's provide the store data to the whole app.
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}> {/* providing store data */}
+      <App />
+    </Provider>
   </React.StrictMode>, 
   document.getElementById('root')
 );
