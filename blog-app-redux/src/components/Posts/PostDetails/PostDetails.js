@@ -1,13 +1,17 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import { useParams } from 'react-router-dom';
 import { FETCH_BY_ID_REQUEST } from '../../../store/posts/types';
 
 const PostDetails = (props) => {
 
+  const params = useParams(); // reading url param
+
   useEffect( () => {
     console.log(props);
     props.dispatch({
-      type: FETCH_BY_ID_REQUEST
+      type: FETCH_BY_ID_REQUEST,
+      postId: params.postId
     });
   }, []);
 

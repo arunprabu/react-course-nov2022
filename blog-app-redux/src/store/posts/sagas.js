@@ -66,8 +66,8 @@ function* watchCreatePost() {
 }
 
 // worker saga -- can connect with rest api and dispatch 
-function* handleFetchByIdRequest() {
-  const res = yield call(callApi, POSTS_API_URL+'/1', 'get')
+function* handleFetchByIdRequest({postId}) {
+  const res = yield call(callApi, POSTS_API_URL + '/' + postId, 'get')
   if (res.error) {
     yield put({
       type: FETCH_BY_ID_ERROR,
