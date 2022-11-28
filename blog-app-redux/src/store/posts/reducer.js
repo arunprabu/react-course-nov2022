@@ -2,7 +2,7 @@
 // Step 2: Let's create the post reducer. 
 // What's Reducer?
 
-import { CREATE_ERROR, CREATE_REQUEST, DELETE_ERROR, DELETE_REQUEST, FETCH_BY_ID_ERROR, FETCH_BY_ID_REQUEST, FETCH_ERROR, FETCH_REQUEST, FETCH_SUCCESS, UPDATE_ERROR, UPDATE_REQUEST } from "./types";
+import { CREATE_ERROR, CREATE_REQUEST, CREATE_SUCCESS, DELETE_ERROR, DELETE_REQUEST, FETCH_BY_ID_ERROR, FETCH_BY_ID_REQUEST, FETCH_BY_ID_SUCCESS, FETCH_ERROR, FETCH_REQUEST, FETCH_SUCCESS, UPDATE_ERROR, UPDATE_REQUEST } from "./types";
 
 /* 
   it is a fn-- that takes in two params -- namely state and action.
@@ -54,7 +54,26 @@ const postReducer = (state = initialPostState, action) => {
         isError: true,
         status: action.payload
       }
-
+    
+    case CREATE_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        postList: [ 
+          ...state.postList, 
+          action.payload
+        ]
+      }
+    
+    case FETCH_BY_ID_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        post: action.payload
+      }
+    
     default:
       return state;
   }
