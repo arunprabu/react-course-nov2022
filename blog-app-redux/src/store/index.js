@@ -17,7 +17,6 @@ export const createRootReducer = (history) => {
 
 // Now, let's create rootSaga here itself -- it can be in rootSaga.js file also
 export function* rootSaga(){
-  console.log('============1. Inside rootSaga');
   yield all([
     fork(postsSaga)
     // another feature's saga can come here

@@ -5,6 +5,8 @@ import { FETCH_BY_ID_REQUEST } from '../../../store/posts/types';
 
 const PostDetails = (props) => {
 
+  console.log(props)
+
   const params = useParams(); // reading url param
 
   useEffect( () => {
