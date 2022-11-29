@@ -1,5 +1,5 @@
 import { AgGridReact } from 'ag-grid-react'
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
@@ -9,7 +9,7 @@ const AgGridExample2 = () => {
   const [columns] = useState([
     { field: 'make' },
     { field: 'model' },
-    { field: 'year' }
+    { field: 'price' }
   ]);
   const defaultColDefs = useMemo(() => {
     return {
@@ -20,6 +20,18 @@ const AgGridExample2 = () => {
   const [rowData, setRowData] = useState([]);
 
   // Hit the REST API - https://www.ag-grid.com/example-assets/row-data.json
+
+  useEffect(() => {
+    fetch('https://www.ag-grid.com/example-assets/row-data.json')
+      .then((res) => {
+        return res.json();
+      })
+      .then((resInJson) => {
+        console.log(resInJson);
+        setRowData(resInJson);
+      })
+  }, [])
+  
 
   return (
     <div>
