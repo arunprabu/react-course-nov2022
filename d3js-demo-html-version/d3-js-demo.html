@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D3.JS Demo</title>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+
+  <h1>D3 JS Demo</h1>
+
+  <h2>Creating Circle and Ellipse</h2>
+  <div id="circleContainer">
+  </div>
+  <script>
+    const circleContainer = d3.select('#circleContainer');
+    const circleSvg = circleContainer.append('svg')
+      .attr('width', 300)
+      .attr('height', 300);
+
+    circleSvg.append('circle')
+      .attr('cx', 100)
+      .attr('cy', 100)
+      .attr('r', 50)
+      .style('fill', 'green');
+
+    circleSvg.append('ellipse')
+      .attr('cx', 150)
+      .attr('cy', 200)
+      .attr('rx', 100)
+      .attr('ry', 50)
+      .style('fill', 'blue')
+  </script>
+
+  <h2>Binding Data and Creating Paragraphs</h2>
+  <div id="textWrapper">
+  </div>
+  <script>
+    const persons = [
+      { name: 'John', age: 21 },
+      { name: 'Steve', age: 25 },
+      { name: 'Sharan', age: 30 },
+      { name: 'Smith', age: 28 },
+      { name: 'Mark', age: 29 },
+      { name: 'Katy', age: 40 }
+    ];
+
+    d3.select('#textWrapper')
+      .selectAll('p') // we mention what element we want to have inside textWrapper
+      .data(persons) // binding data -- joins an array of data with current selection
+      .enter() // enter will select the missing placeholder element -- i.e 'p' tags 
+      // enter method works only when you call data operator before. 
+      .append('p')  // this will create p tags 
+      .text((person) => { // this will embed the data in between 'p' tags
+        return `Name: ${person.name} Age:${person.age}`;
+      })
+
+  </script>
+
+
+  <h2>Binding Data and Creating SVG's with circles</h2>
+  <div id="svgWrapper">
+  
+  </div>
+  <script>
+    const circles = [
+      { cx: 50, cy: 50, r: 50, fill: 'pink' },
+      { cx: 120, cy: 120, r: 60, fill: 'green' },
+      { cx: 180, cy: 180, r: 40, fill: 'blue' },
+      { cx: 240, cy: 65, r: 65, fill: 'purple' }
+    ];
+
+    const svgContainer = d3.select('#svgWrapper')
+      .append('svg')
+      .attr('width', 600)
+      .attr('height', 400);
+
+    const circle = svgContainer.selectAll('circle')
+      .data(circles)
+      .enter()
+      .append('circle');
+
+    circle.attr('cx', ({cx}) => {
+        return cx;
+      })
+      .attr('cy', ({cy}) => {
+        return cy;
+      })
+      .attr('r', ({r}) => {
+        return r;
+      })
+      .style('fill', ({fill}) => {
+        return fill;
+      })
+
+  </script>
+
+
+
+
+  <!-- <div id="div1">
+
+  </div>
+
+  <script>
+    d3.select('#div1') // method -- accept css selectors
+      .append('p') // operator -- also selects p tag
+      .attr('id', 'p1')
+      .text('Hello') // operator -- text will be added inside p tag
+  </script> -->
+
+
+
+</body>
+
+</html>
