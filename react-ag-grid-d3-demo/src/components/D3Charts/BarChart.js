@@ -1,44 +1,38 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react'
 import { select, axisBottom, axisRight, scaleLinear, scaleBand } from "d3";
 
 const BarChart = () => {
-
   const [data, setData] = useState([
     {
       name: 'Virat Kohli',
-      total: 71,
-      color: 'lightgreen'
+      total: 71
     },
     {
       name: 'Sachin Tendulkar',
-      total: 100,
-      color: 'red'
+      total: 100
     },
     {
       name: 'Ricky Ponting',
-      total: 71,
-      color: 'green'
+      total: 71
     },
     {
       name: 'Kumar Sangakkara',
-      total: 63,
-      color: 'blue'
+      total: 63
     },
     {
       name: 'Jacques Kallis',
-      total: 62,
-      color: 'pink'
+      total: 62
     }
   ]);
   const svgRef = useRef();
 
-  // let extractDataAsList = [];
-  // data.map(item => {
-  //   extractDataAsList = [
-  //     ...extractDataAsList,
-  //     item.total
-  //   ]
-  // })
+  let extractDataAsList = [];
+  data.map(item => {
+    extractDataAsList = [
+      ...extractDataAsList,
+      item.total
+    ]
+  })
 
   // will be called initially and on every data change
   useEffect(() => {
@@ -54,7 +48,7 @@ const BarChart = () => {
 
     const colorScale = scaleLinear()
       .domain([60, 65, 70, 75, 100])
-      //.range(["lightgreen", "green", "blue", "pink", "red"])
+      .range(["lightgreen", "green", "blue", "pink", "red"])
       .clamp(true);
 
     const xAxis = axisBottom(xScale).ticks(data.length);
@@ -72,25 +66,16 @@ const BarChart = () => {
 
     svg
       .selectAll(".bar")
-      .data(data)
+      .data(extractDataAsList)
       .join("rect")
       .attr("class", "bar")
       .style("transform", "scale(1, -1)")
-      .attr("x", (value, index) => {
-        return xScale(index)
-      })
+      .attr("x", (value, index) => xScale(index))
       .attr("y", -150)
       .attr("width", xScale.bandwidth())
       .transition()
-      .attr("fill", (data) => {
-        return data.color;
-      })
-      // .attr("fill", (data, index) => {
-      //   return colorScale.range()[index];
-      // })
-      .attr("height", (data) => {
-        return 150 - yScale(data.total);
-      });
+      .attr("fill", colorScale)
+      .attr("height", value => 150 - yScale(value));
   }, [data]);
 
   return (

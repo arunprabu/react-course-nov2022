@@ -69,10 +69,22 @@ const PieChart = () => {
       .append("text")
       .text((d) => `${d.name}: ${d.value}`) // label text
       .style("fill", "#000")
-      .attr("transform", (data, index) => `translate(${(index * 100) + 25}, 20)`)
+      .attr("transform", (data, index) => `translate(${(index * 100) + 42}, 20)`)
       .transition()
       .duration(700)
-      .style("font-size", "15px");
+      .style("font-size", "14px");
+
+    svg.selectAll('rect')
+      .data(data)
+      .enter()
+      .append("rect")
+      .attr('width', 20)
+      .attr('height', 15)
+      .attr('stroke', '#000')
+      .attr('stroke-width', 1)
+      .attr("fill", (d, i) => colorScale(i))
+      .attr("transform", (data, index) => `translate(${(index * 100) + 19}, 8)`)
+
   }, [data]);
 
   return (
