@@ -7,3 +7,11 @@
   text-align: center;
   padding-top: 10%;
 }
+
+/* bar chart */
+.bar-chart-svg {
+  background: #eee;
+  overflow: visible;
+  margin-bottom: 2rem;
+  display: block;
+}

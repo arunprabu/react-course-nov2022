@@ -80,7 +80,7 @@ const BarChart = () => {
 
   return (
     <React.Fragment>
-      <svg ref={svgRef}>
+      <svg className="bar-chart-svg" ref={svgRef}>
         <g className="x-axis" />
         <g className="y-axis" />
       </svg>
