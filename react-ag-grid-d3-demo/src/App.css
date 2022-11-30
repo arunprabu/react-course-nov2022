@@ -1,3 +1,9 @@
 .redText{
   color: red;
 }
+.scatterplot-wrapper{
+  border: solid 1px gray;
+  background: #ddd;
+  text-align: center;
+  padding-top: 10%;
+}
