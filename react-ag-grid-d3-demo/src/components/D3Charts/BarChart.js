@@ -80,6 +80,7 @@ const BarChart = () => {
 
   return (
     <React.Fragment>
+      {/* the following css class is needed for the scale to appear properly */}
       <svg className="bar-chart-svg" ref={svgRef}>
         <g className="x-axis" />
         <g className="y-axis" />
