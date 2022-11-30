@@ -28,7 +28,7 @@ const DonutChart = () => {
     // create svg
     const svg = d3.select(element)
       .append('svg')
-      .attr('width', 500)
+      .attr('width', '100%')
       .attr('height', 500)
       .attr('viewBox', `0 0 ${boxSize} ${boxSize}`)
       .append('g')
