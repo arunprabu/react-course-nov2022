@@ -30,3 +30,10 @@ D3.JS
   File structure and linked views (self-learn)
   D3 Brushes (self-learn)
 
+Instead of the above, What I taught you are 
+--
+  Pie chart and Donut Charts (for case study project)
+
+---
+
+
