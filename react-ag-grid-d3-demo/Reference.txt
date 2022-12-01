@@ -1,15 +1,32 @@
 1. How to fetch data from REST API in D3.JS?
-
   d3.json("/data/users.json", function(error, data) {
       console.log(error);
       console.log(data);
   });
 
-How to fetch data from CSV file in D3.JS?
+2. How to fetch data from CSV file in D3.JS?
   d3.csv("/data/employees.csv", function(data) {
     console.log(data);
   });
 
 Refer: https://www.d3indepth.com/hierarchies/
 
+
+Self-Learn Topics
+=============
+D3.JS
+---
+  Logarithmic Scales [Self-Learn]
+  Time Scales [Self-Learn]
+  Ordinal Scales [Self-Learn]
+  Introduction - Hierarchical Data (self-learn)
+    Building hierarchies in D3
+    Tree Diagrams
+    Treemaps
+    Circle Packing
+    Sunburst Plots
+  Introducing Tooltips (Self-learn)
+  Event listeners and handlers in D3 (self-learn)
+  File structure and linked views (self-learn)
+  D3 Brushes (self-learn)
 
