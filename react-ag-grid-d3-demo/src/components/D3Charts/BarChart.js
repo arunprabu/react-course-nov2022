@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { select, axisBottom, axisRight, scaleLinear, scaleBand } from "d3";
+import React, { useEffect, useRef, useState } from 'react';
+import { select, axisBottom, axisRight, scaleLinear, scaleBand } from 'd3';
 
 const BarChart = () => {
-  const [data, setData] = useState([
+  const [data] = useState([
     {
       name: 'Virat Kohli',
       total: 71
@@ -24,6 +24,7 @@ const BarChart = () => {
       total: 62
     }
   ]);
+
   const svgRef = useRef();
 
   let extractDataAsList = [];
@@ -31,8 +32,8 @@ const BarChart = () => {
     extractDataAsList = [
       ...extractDataAsList,
       item.total
-    ]
-  })
+    ];
+  });
 
   // will be called initially and on every data change
   useEffect(() => {
@@ -48,34 +49,34 @@ const BarChart = () => {
 
     const colorScale = scaleLinear()
       .domain([60, 65, 70, 75, 100])
-      .range(["lightgreen", "green", "blue", "pink", "red"])
+      .range(['lightgreen', 'green', 'blue', 'pink', 'red'])
       .clamp(true);
 
     const xAxis = axisBottom(xScale).ticks(data.length);
 
     svg
-      .select(".x-axis")
-      .style("transform", "translateY(150px)")
+      .select('.x-axis')
+      .style('transform', 'translateY(150px)')
       .call(xAxis);
 
     const yAxis = axisRight(yScale);
     svg
-      .select(".y-axis")
-      .style("transform", "translateX(300px)")
+      .select('.y-axis')
+      .style('transform', 'translateX(300px)')
       .call(yAxis);
 
     svg
-      .selectAll(".bar")
+      .selectAll('.bar')
       .data(extractDataAsList)
-      .join("rect")
-      .attr("class", "bar")
-      .style("transform", "scale(1, -1)")
-      .attr("x", (value, index) => xScale(index))
-      .attr("y", -150)
-      .attr("width", xScale.bandwidth())
+      .join('rect')
+      .attr('class', 'bar')
+      .style('transform', 'scale(1, -1)')
+      .attr('x', (value, index) => xScale(index))
+      .attr('y', -150)
+      .attr('width', xScale.bandwidth())
       .transition()
-      .attr("fill", colorScale)
-      .attr("height", value => 150 - yScale(value));
+      .attr('fill', colorScale)
+      .attr('height', value => 150 - yScale(value));
   }, [data]);
 
   return (
@@ -87,6 +88,6 @@ const BarChart = () => {
       </svg>
     </React.Fragment>
   );
-}
+};
 
-export default BarChart
+export default BarChart;

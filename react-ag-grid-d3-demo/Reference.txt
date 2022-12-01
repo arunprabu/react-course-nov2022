@@ -1,0 +1,15 @@
+1. How to fetch data from REST API in D3.JS?
+
+  d3.json("/data/users.json", function(error, data) {
+      console.log(error);
+      console.log(data);
+  });
+
+How to fetch data from CSV file in D3.JS?
+  d3.csv("/data/employees.csv", function(data) {
+    console.log(data);
+  });
+
+Refer: https://www.d3indepth.com/hierarchies/
+
+
