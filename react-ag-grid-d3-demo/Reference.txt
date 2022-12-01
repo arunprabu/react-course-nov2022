@@ -37,3 +37,29 @@ Instead of the above, What I taught you are
 ---
 
 
+
+Checklist for taking build and project submission
+---
+  1. Have zero linting errors 
+  2. Remove unnecessary console.logs 
+  3. check for errors in console. Fix all console errors 
+  4. Ensure your project is responsive in Phone and Tablets 
+  5. Implement code-splitting, lazy loading 
+  6. Implement Page Title (refer: helmet package)
+  7. Write unit tests and run them 
+      npm run test  (will start unit testing)
+  8. try the commands 
+      npm run build 
+        Note: you will get 'dist' folder 
+      
+  9. get the code coverage report 
+      npm run test --coverage
+        Note: you will get 'coverage' folder 
+
+  10. except node_modules folder, zip all the other files and folders 
+      then rename the file with your name suffix
+      and then, submit 
+
+
+  
+
